@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <style>
+    html, body{
+      height:100%;
+      margin:0;
+      padding:0;
+      font-family: Arial;
+    }
+
+    /* Fondo degradado verde */
+    body{
+      background: linear-gradient(135deg, #6ee87a, #3bbf61);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+    }
+
+    /* Capa ligera */
+    body::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.15);
+      backdrop-filter: blur(2px);
+      z-index:-1;
+    }
+
+    .login-box{
+      width:320px;
+      background: #ffffffdd;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.3);
+      animation: fade 0.8s ease-in-out;
+      text-align:center;
+    }
+
+    /* LOGO */
+    .logo-circle{
+      width:90px;
+      height:90px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid #2dbf4a;
+      margin:0 auto 20px auto;
+      box-shadow:0 0 10px rgba(12, 125, 41, 0.5);
+    }
+
+    h2{
+      margin:0 0 25px 0;
+      color:#0e8c3a;
+    }
+
+    .field{
+      margin-bottom:20px; /* MÁS ESPACIO ENTRE CAJAS */
+      text-align:left;
+      width:100%;
+    }
+
+    label{
+      font-size:15px;
+      font-weight:bold;
+      color:#0c7f37;
+      display:block;
+      margin-bottom:6px; /* Espacio entre texto y la caja */
+    }
+
+    input{
+      width:100%;
+      padding:12px;
+      border:1px solid #8ae6a3;
+      border-radius:8px;
+      font-size:15px;
+      outline:none;
+      box-sizing:border-box;
+    }
+
+    input:focus{
+      border-color:#09b44e;
+      box-shadow:0 0 6px #0bc253;
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      background:#1fc54c;
+      border:none;
+      color:white;
+      font-size:17px;
+      border-radius:8px;
+      cursor:pointer;
+      margin-top:5px;
+      transition:0.2s;
+    }
+
+    button:hover{
+      background:#18a33f;
+    }
+
+    .error{
+      color:red;
+      font-size:14px;
+      margin-top:12px;
+      text-align:center;
+      display:none;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="login-box">
+
+    <!-- LOGO CIRCULAR -->
+    <img src="img/ima1.jpg" class="logo-circle" alt="Logo">
+
+    <h2>Acceder</h2>
+
+    <div class="field">
+      <label>Usuario:</label>
+      <input type="text" id="user">
+    </div>
+
+    <div class="field">
+      <label>Contraseña:</label>
+      <input type="password" id="pass">
+    </div>
+
+    <button onclick="login()">Ingresar</button>
+
+    <div class="error" id="error">Usuario o contraseña incorrectos</div>
+  </div>
+
+<script>
+  function login(){
+    const user = document.getElementById("user").value;
+    const pass = document.getElementById("pass").value;
+
+    const userOK = "admin";
+    const passOK = "1234";
+
+    if(user === userOK && pass === passOK){
+      window.location.href = "Info.html";
+    } else {
+      document.getElementById("error").style.display = "block";
+    }
+  }
+</script>
+
+</body>
+</html>
+
+

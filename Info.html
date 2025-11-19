@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expedientes</title>
+
+<style>
+
+    html, body{
+        height:100%;
+        margin:0;
+        padding:0;
+        font-family: Arial;
+    }
+
+    /* FONDO VERDE */
+    body{
+        background: linear-gradient(135deg, #6ee87a, #3bbf61);
+        position:relative;
+        padding:20px;
+    }
+
+    body::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:rgba(0,0,0,0.18);
+        backdrop-filter:blur(2px);
+        z-index:-1;
+    }
+
+    /* TÍTULO */
+    h1{
+        text-align:center;
+        margin:0;
+        margin-bottom:20px;
+        font-size:34px;
+        color:white;
+        text-shadow:2px 2px 5px rgba(0,0,0,0.8);
+    }
+
+    /* BOTÓN REGRESAR */
+    .regresar{
+        background:#1fc54c;
+        padding:10px 25px;
+        border-radius:25px;
+        text-decoration:none;
+        color:white;
+        font-weight:bold;
+        position:absolute;
+        top:20px;
+        left:20px;
+        box-shadow:0 3px 6px rgba(0,0,0,0.3);
+    }
+
+    .regresar:hover{
+        background:#18a33f;
+    }
+
+    /* GRID */
+    .grid{
+        margin-top:30px;
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
+        gap:20px;
+    }
+
+    /* TARJETAS */
+    .card{
+        background:#e4ffebcc;
+        padding:22px;               /* MÁS ESPACIO INTERNO */
+        border-radius:15px;
+        display:flex;
+        gap:25px;                   /* SEPARA LA IMAGEN DE LOS INPUTS */
+        align-items:flex-start;
+        box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .card img{
+        width:120px;
+        height:120px;
+        border-radius:12px;
+        object-fit:cover;
+        border:3px solid #1fc54c;
+        box-shadow:0 0 8px rgba(31,197,76,0.5);
+    }
+
+    /* CONTENEDOR DE INPUTS */
+    .info{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        gap:14px;                  /* ESPACIO ENTRE INPUTS */
+        padding-right:10px;        /* DESPEGADO DEL BORDE DERECHO */
+    }
+
+    /* INPUTS VERDES */
+    input, select{
+        width:100%;
+        padding:10px;             /* MÁS ESPACIO */
+        border-radius:8px;
+        border:1px solid #9cebaf;
+        font-size:14px;
+        background:white;
+        box-shadow:0 0 5px rgba(0,0,0,0.1) inset;
+    }
+
+    input:focus, select:focus{
+        outline:none;
+        border-color:#16b84d;
+        box-shadow:0 0 6px #1fc54c;
+    }
+
+</style>
+
+</head>
+<body>
+
+<a href="index.html" class="regresar">Regresar</a>
+
+<h1>UATV 💚</h1>
+
+<div class="grid">
+
+    <div class="card">
+        <img src="persona1.jpg">
+        <div class="info">
+            <input value="Edgar Felipe Cabañas Gutierres">
+            <select>
+                <option>Masculino</option>
+                <option>Femenino</option>
+            </select>
+            <input value="Tecnologías de la Información">
+            <input value="Instalación de cámaras de seguridad">
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="persona2.jpg">
+        <div class="info">
+            <input value="Jesús Emmanuel Ramírez Bravo">
+            <select>
+                <option>Masculino</option>
+                <option>Femenino</option>
+            </select>
+            <input value="Tecnologías de la Información">
+            <input value="Mantenimiento de equipos de software">
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="persona3.jpg">
+        <div class="info">
+            <input value="María de las Nieves Lezama Torres">
+            <select>
+                <option>Femenino</option>
+                <option>Masculino</option>
+            </select>
+            <input value="Tecnologías de la Información">
+            <input value="Mantenimiento de equipos de software">
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="persona4.jpg">
+        <div class="info">
+            <input value="Dorisbeth Guzman Tito">
+            <select>
+                <option>Femenino</option>
+                <option>Masculino</option>
+            </select>
+            <input value="Tecnologías de la Información">
+            <input value="Mantenimiento de software">
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="persona5.jpg">
+        <div class="info">
+            <input value="Dalia Flores Gonzales">
+            <select>
+                <option>Femenino</option>
+                <option>Masculino</option>
+            </select>
+            <input value="Tecnologías de la Información">
+            <input value="Mantenimiento de equuipos de software">
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="persona6.jpg">
+        <div class="info">
+            <input value="Eileen Manzano Moreno">
+            <select>
+                <option>Masculino</option>
+                <option>Femenino</option>
+            </select>
+            <input value="Tecnologías de la Información">
+            <input value="Creacion de paginas web">
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+
